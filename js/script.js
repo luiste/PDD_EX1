@@ -1,25 +1,38 @@
 $(document).ready(function () {
                   
-        $('.thumb2').on('click', function() {
- 
-              
-        $('.modal-container').addClass('modal-isOpen');
+    $('.thumb2').on('click', function(ev) {
+        
+        if (this == ev.target) {
+            $(this).addClass('is-selected');
+            $('.modal-container').addClass('modal-isOpen'); 
+        }
      
     });
     
     
-    $(document).ready(function(){
-    $(".thumb2").click(function(){
-        $(".modal-container").width(1376).height(500);
-    });
-});
     
+    $('.thumb2').on('click', function() {      
+        $('.section').addClass('modal-bg');
+     
+    });
+    
+    
+    
+    
+
     
 
     $('.modal-close').on('click', function() {
-        $('.modal-container').removeClass('modal-isOpen')
+        $('.modal-container').removeClass('modal-isOpen');
+        $('.thumb2').removeClass('is-selected');
+        $('.section').removeClass('modal-bg');
+        
     });
+  
     
+
+console.log("HELLO")    
 });
 
-console.log('hello');   
+
+
