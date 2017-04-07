@@ -135,6 +135,7 @@ header {
 
 .is-selected {
     width: 80% !important;
+    height: auto;
     padding:0;
 }
 
